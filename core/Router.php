@@ -25,6 +25,7 @@
 
     public function direct($uri)
     {
+
         $uri = parse_url($uri)["path"];
         $prefix = App::get('config')['base_uri'] ?? null;
         if (isset($prefix) && !empty($prefix))
@@ -40,8 +41,19 @@
 
         if(array_key_exists($uri, $this->routes))
         {
+            session_start();
+            //check if is protected route and user not authenicated
+            if($this->routes[$uri]['is_protected'] && empty($_SESSION['user']))
+            {
+
+                //redirect to login page
+                $path = App::get('config')['base_uri'] . '/login_form';
+                header("Location: /{$path}");
+                exit;
+            }
+
             return $this->callAction(
-                ...explode('@',$this->routes[$uri])
+                ...explode('@',$this->routes[$uri]['action'])
             );
         }
 

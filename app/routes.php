@@ -2,10 +2,11 @@
 
 $router->define([
 
-    ''=> 'IndexController',
-    'login'=> 'AuthController@login',
-    'login_post'=> 'AuthController@login_post',
-    'register'=> 'AuthController@register',
-    'register_post'=> 'AuthController@register_post',
+    ''=> ["action" => 'IndexController' , "is_protected" => true],
+    'login_form'=> ["action" => 'AuthController@loginForm' , "is_protected" => false], 
+    'login'=> ["action" => 'AuthController@login' , "is_protected" => false], 
+    'logout'=>  ["action" => 'AuthController@logout' , "is_protected" => false], 
+    // 'register'=> 'AuthController@register',
+    // 'register_post'=> 'AuthController@register_post',
 
 ]);
