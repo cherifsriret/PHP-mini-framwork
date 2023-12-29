@@ -45,4 +45,16 @@
         }
 
 
+        public function logout()
+        {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                //redirect to login page with error
+                session_start();
+                unset($_SESSION['user']) ; 
+                $path = App::get('config')['base_uri'] . '/login_form';
+                header("Location: /{$path}");
+            }
+        }
+
+
     }
