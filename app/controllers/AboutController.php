@@ -1,9 +1,10 @@
 <?php
 
-    class IndexController
+    class AboutController
     {
         public function index()
         {
-            return Helper::view("index");
+            $company = "He-Arc";
+            return Helper::view("about", ['company' => $company]);
         }
     }

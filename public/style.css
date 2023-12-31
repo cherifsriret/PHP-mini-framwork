@@ -22,17 +22,18 @@ nav {
 
   nav a {
     text-decoration: none;
-    padding: 10px;
+    padding: 0px;
     margin: 0 10px;
     font-size: 18px;
+    line-height: 34px;
   }
 
   nav a:hover {
-    background-color: #555;
+    color: #d52e64;
   }
 
   .logout-btn {
-    background-color: #4caf50;
+    background-color: #d52e64;
     color: white;
     padding: 10px;
     border: none;
@@ -73,7 +74,7 @@ nav {
 }
 
 .form-group button {
-    background-color: #4caf50;
+    background-color: #d52e64;
     width: 100%;
     color: #fff;
     padding: 10px;

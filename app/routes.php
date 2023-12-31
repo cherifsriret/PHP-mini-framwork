@@ -6,6 +6,7 @@ $router->define([
     'login_form'=> ["action" => 'AuthController@loginForm' , "is_protected" => false], 
     'login'=> ["action" => 'AuthController@login' , "is_protected" => false], 
     'logout'=>  ["action" => 'AuthController@logout' , "is_protected" => false], 
+    'about' => ["action" => 'AboutController' , "is_protected" => false],   '',
     // 'register'=> 'AuthController@register',
     // 'register_post'=> 'AuthController@register_post',
 
