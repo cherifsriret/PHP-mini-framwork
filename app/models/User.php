@@ -29,12 +29,12 @@ class User
         $this->id = $value;
     }
 
-	public function getUsername()
+	public function getUserName()
 	{
 		return $this->username;
 	}
 
-    public function setUsername($value)
+    public function setUserName($value)
     {
         $this->username = $value;
     }
@@ -58,4 +58,26 @@ class User
     {
         $this->password = $value;
     }
+
+    public function getFirstName()
+	{
+		return $this->first_name;
+	}
+
+    public function setFirstName($value)
+    {
+        $this->first_name = $value;
+    }
+
+    public function getLastName()
+	{
+		return $this->last_name;
+	}
+
+    public function setLastName($value)
+    {
+        $this->last_name = $value;
+    }
+
+    
 }

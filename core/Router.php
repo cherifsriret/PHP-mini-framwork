@@ -41,7 +41,6 @@
 
         if(array_key_exists($uri, $this->routes))
         {
-            session_start();
             //check if is protected route and user not authenicated
             if($this->routes[$uri]['is_protected'] && empty($_SESSION['user']))
             {

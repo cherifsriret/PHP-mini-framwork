@@ -20,7 +20,6 @@
     </form>
 
     <?php 
-        session_start();
         if (isset($_SESSION['error'])) : 
     ?>
     <div id="alertMessage" class="alert alert-danger" ><?= $_SESSION['error']?></div>

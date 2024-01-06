@@ -7,4 +7,7 @@
     require 'helpers/Helper.php';
 
     App::load_config("config.php");
+    
     App::set('dbh', Connection::make(App::get('config')['database']));
+    
+    session_start();

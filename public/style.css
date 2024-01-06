@@ -65,7 +65,7 @@ nav {
     display: block;
 }
 
-.form-group input {
+.form-group input, .form-group select {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
@@ -107,3 +107,69 @@ nav {
   .xdebug-error {
     display: none;
   }
+  /*Home page*/
+  .courses-section
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .course-container {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 15px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .course {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    flex: 1;
+  }
+
+  .average ,.notes{
+    font-size: 16px;
+    color: #555;
+    flex: 1;
+  }
+
+  .your-average {
+    font-size: 18px;
+    font-weight: bold;
+    flex: 1;
+  }
+
+
+  input.form-control {
+    height: 35px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: 1px #d52e64 solid;
+}
+
+
+.note-add-form {
+  max-width: 300px;
+  margin: auto;
+}
+.note
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex1
+{
+  flex: 1;
+}
