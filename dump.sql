@@ -59,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `notes` (
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
-ALTER TABLE `notes` ADD CONSTRAINT `user_note_fk` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`), ADD CONSTRAINT `course_note_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
+ALTER TABLE `notes` ADD CONSTRAINT `course_note_fk` FOREIGN KEY (`course_id`) REFERENCES `courses` (`id`), ADD CONSTRAINT `user_note_fk` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Déclencheurs `notes`
@@ -106,12 +106,14 @@ CREATE TABLE IF NOT EXISTS `users` (
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `first_name`, `last_name`) VALUES
 (1, 'admin', 'admin@domain.com', '$2y$10$Eb1W6MrU3WCDTeNKXlO8uuVpdBf31gzQqLYDn4wgx6b3gTj/YSZwy', 'admin', 'user'),
 (2, 'admin2', 'admin2@domain.com', '$2y$10$Eb1W6MrU3WCDTeNKXlO8uuVpdBf31gzQqLYDn4wgx6b3gTj/YSZwy', 'admin2', 'user'),
-(3, 'admin3', 'admin3@domain.com', '$2y$10$Eb1W6MrU3WCDTeNKXlO8uuVpdBf31gzQqLYDn4wgx6b3gTj/YSZwy', 'admin3', 'user');
+(3, 'admin3', 'admin3@domain.com', '$2y$10$Eb1W6MrU3WCDTeNKXlO8uuVpdBf31gzQqLYDn4wgx6b3gTj/YSZwy', 'admin3', 'user')
+
+;
 
 
 INSERT INTO `courses` (`id`, `name`, `description`, `average`) VALUES 
-(NULL, 'Mathématiques', 'Mathématiques',  '0.00'),
-(NULL, 'Français', 'Français',  '0.00'),
-(NULL, 'Anglais', 'Anglais', '0.00'),
-(NULL, 'Physique', 'Physique',  '0.00');
-
+(NULL, 'Math Spécifiques', 'Math Spécifiques',  '0.00'),
+(NULL, 'Analyse', 'Analyse',  '0.00'),
+(NULL, 'Statistique et probabilité', 'Statistiques et probabilités', '0.00'),
+(NULL, 'Application Web I', 'Application Web I', '0.00'),
+(NULL, 'Base de données II', 'Base de données II', '0.00');

@@ -13,6 +13,7 @@
 			<img src="/<?=  App::get('config')['base_uri']?>/public/logo.jpg" alt="" srcset="">
 		</a>
 		<div class="menu">
+		<a href="/<?=  App::get('config')['base_uri']?>/">Home</a>
 		<a href="/<?=  App::get('config')['base_uri']?>/about">About</a>
 
 		<?php 

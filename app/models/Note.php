@@ -106,9 +106,11 @@ class Note
         $statement->bindParam(2, $this->course_id, PDO::PARAM_INT);
         $statement->bindParam(3, $this->note, PDO::PARAM_STR);
         $statement->bindParam(4, $this->coeficient, PDO::PARAM_INT);
-
-
         // use exec() because no results are returned
         $statement->execute();
+
+        //push to log
+        Helper::logAction("create a note id: ".$dbh->lastInsertId());
+
     }
 }

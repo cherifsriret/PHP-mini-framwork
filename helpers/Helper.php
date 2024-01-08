@@ -42,12 +42,17 @@ class Helper
        return $_SESSION[ 'user'];
     }
 
-    public static function group_by($array, $key) {
-        $result = array();
-        foreach ($array as $val) {
-            $result[$val->$key][] = $val;
-        }
-        return $result;
+
+    public static function logAction($action)
+    {
+      // Log the action
+        $logMessage = date('Y-m-d H:i:s') . ' - ' . $action .' By user :'.static::getCurrentUserId(). PHP_EOL;
+        // Specify the log file path
+        $logFilePath =  'logfile.txt';
+    
+        // Write to the log file
+        file_put_contents($logFilePath, $logMessage, FILE_APPEND);
     }
+
 
 }

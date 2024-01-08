@@ -173,3 +173,13 @@ nav {
 {
   flex: 1;
 }
+
+table
+{
+  text-align: center;
+  width: 100%;
+}
+
+table , tr>td , tr>th { 
+  border : 1px solid 
+  }

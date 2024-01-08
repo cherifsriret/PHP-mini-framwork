@@ -15,6 +15,9 @@ $router->define([
     'note_update_form' => ["action" => 'NoteController@updateForm' , "is_protected" => true], //GET 
     'note_update' => ["action" => 'NoteController@update' , "is_protected" => true], //POST 
 
+    'details_course' => ["action" => 'CourseController@details' , "is_protected" => true], //GET 
+
+
     // 'register'=> 'AuthController@register',
     // 'register_post'=> 'AuthController@register_post',
 

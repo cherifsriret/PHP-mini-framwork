@@ -1,5 +1,5 @@
 <?php
-
+require "app/models/Audit.php";
 /**
 * The Course class
 */
@@ -12,12 +12,11 @@ class Course
 
 	private $description;
 
-	private $coeficient;
-
 	private $average;
 
 	private $notes;
 
+	private $audits;
 
     // Getters and Setters
     public function getId()
@@ -50,17 +49,6 @@ class Course
         $this->description = $value;
     }
 
-    public function getCoeficient()
-	{
-		return $this->coeficient;
-	}
-
-    public function setCoeficient($value)
-    {
-        $this->coeficient = $value;
-    }
-
-    
     public function getAverage()
 	{
 		return $this->average;
@@ -81,10 +69,36 @@ class Course
         $this->notes = $value;
     }
 
+    
+    public function getAudits()
+	{
+		return $this->audits;
+	}
+
+    public function setAudits($value)
+    {
+        $this->audits = $value;
+    }
+
     public static function fetchAll(){
         $dbh = App::get('dbh');
         $statement = $dbh->prepare("SELECT * FROM `courses` ORDER BY `name` ASC");
         $statement->execute();
         return $statement->fetchAll(PDO::FETCH_CLASS, 'Course');
     }
+
+
+    public static function fetchId(int $id){
+        $dbh = App::get('dbh');
+        $statement = $dbh->prepare("SELECT * FROM `courses` WHERE `id` = ? ");
+        $statement->bindParam(1, $id, PDO::PARAM_INT);
+        $statement->setFetchMode(PDO::FETCH_CLASS, 'Course');
+        $statement->execute();
+        $course = $statement->fetch();
+        //set audits
+        $course->setAudits(Audit::fetchAllByCourseId($id));
+        return $course;
+    }
+
+    
 }
