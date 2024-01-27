@@ -1,4 +1,13 @@
-# Mini-projet Applications Web I
+## CRUD Notes
+
+# Liste des utilisateur de l'application
+
+
+|  email  | password |  firstName  | lastname  |
+|  marwa.wais@he-arc.ch  | 123 |  marwa  | wais  |
+|  mael.brandt@he-arc.ch  | 123 |  mael  | brandt  |
+|  houssem.themlaoui@he-arc.ch  | 123 |  houssem  | themlaoui  |
+
 
 [[_TOC_]]
 
