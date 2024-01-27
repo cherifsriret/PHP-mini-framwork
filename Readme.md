@@ -28,7 +28,7 @@
 
 - Difficulté de retrouver l'utilisateur : En cas d'oubli du pseudonyme, il peut être difficile pour l'utilisateur de récupérer son compte, car il n'y a pas d'information de contact directe.
 - Manque de validation : Les pseudonymes ne sont généralement pas vérifiés, ce qui peut permettre à des utilisateurs de choisir des identifiants inappropriés ou trompeurs.
-## Adresse e-mail :
+# Adresse e-mail :
 # Avantages :
 
 - Identité vérifiable : Les adresses e-mail sont généralement associées à une identité vérifiable, ce qui peut renforcer la sécurité et aider à prévenir les fraudes.
