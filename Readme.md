@@ -65,7 +65,7 @@ CREATE PROCEDURE `maj_audit_avg_course` (IN `p_id_course` INT)   BEGIN
     -- Mettre à jour la table course mettre a jour la moyenne du cours
     UPDATE `courses` SET `average` = v_avg WHERE  `id` = p_id_course ;
   END;  -- Fin de la transaction implicite
-END
+END;
 
 ```
 
