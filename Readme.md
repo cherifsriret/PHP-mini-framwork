@@ -1,7 +1,15 @@
 ## CRUD Notes
 
-# Liste des utilisateur de l'application
+#Technologies utilisées
 
+- PHP
+- CSS
+- Javascript
+- Html 5
+
+
+
+# Liste des utilisateur de l'application
 
 |  email  | password |  firstName  | lastname  |
 |----------------|-------------------------------|-----------------------------|-----------------------------|
